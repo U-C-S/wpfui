@@ -63,7 +63,7 @@ namespace WPFUI.Appearance
 
                     if (windowHandle == IntPtr.Zero) return;
 
-                    Apply(windowHandle, type);
+                    Apply(windowHandle, type, force);
                 };
             };
 
@@ -339,7 +339,7 @@ namespace WPFUI.Appearance
                 return true;
             }
 
-            if (Common.Windows.IsBelow(WindowsRelease.Windows7Sp1))
+            if (Common.Windows.Is(WindowsRelease.Windows10V20H1))
             {
                 //TODO: We need to set window transparency to True
 
